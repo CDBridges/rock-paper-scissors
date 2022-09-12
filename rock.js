@@ -39,6 +39,20 @@ function playRound(playerSelection, computerSelection) {
         }
 
      }
+     else if (playerSelection.toLowerCase() === 'scissors') {
+        if (computerSelection === 'rock'){
+            return 'You Lose! Rock beats Scissors!';
+        }
+        else if (computerSelection === 'paper'){
+            return 'You Win! Scissors beats Paper';
+        }
+        else if (computerSelection === 'scissors'){
+            return 'You Tie!';
+        }
+     }
+     else {
+         return 'Please choose rock, paper, or scissors';
+     }
 }
 
         // THE METHOD BELOW IS ONE OF MY SOLUTIONS
