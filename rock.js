@@ -16,15 +16,41 @@ function playRound(playerSelection, computerSelection) {
      playerSelection = prompt("rock, paper, scissors?");
      computerSelection = getComputerChoice();
 
-     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock'){
-         return 'You Tie!';
+     if (playerSelection.toLowerCase() === 'rock') {
+         if (computerSelection === 'rock'){
+             return 'You Tie!';
+         }
+         else if (computerSelection === 'paper'){
+             return 'You Lose! Paper beats Rock!';
+         }
+         else if (computerSelection === 'scissors'){
+             return 'You Win! Rock beats Scissors!';
+         }
      }
-     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper'){
-        return 'You Lose! Paper beats Rock!';
-    }
-    if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors'){
-        return 'You Win! Rock beats Scissors!';
-    }
+     else if (playerSelection.toLowerCase() === 'paper') {
+        if (computerSelection === 'rock'){
+            return 'You Win! Paper beats Rock!';
+        }
+        else if (computerSelection === 'paper'){
+            return 'You Tie!';
+        }
+        else if (computerSelection === 'scissors'){
+            return 'You Lose! Scissors beats Paper!';
+        }
+
+     }
+}
+
+        // THE METHOD BELOW IS ONE OF MY SOLUTIONS
+   //  if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock'){
+   //      return 'You Tie!';
+   //  }
+   //  if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper'){
+   //     return 'You Lose! Paper beats Rock!';
+   // }
+   //  if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors'){
+   //     return 'You Win! Rock beats Scissors!';
+   // }
            
         //THE METHOD BELOW USES switch()
 
@@ -41,5 +67,5 @@ function playRound(playerSelection, computerSelection) {
    //             break;
     //    }
 
-    }
+    
 
